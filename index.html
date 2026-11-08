@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#faf8f5">
+  <meta name="description" content="Wedding invitation of Muhammed Hisham and Aneena Jubin">
+  <title>Muhammed Hisham &amp; Aneena Jubin | Wedding Invitation</title>
+  
+  <!-- Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- Floating Navigation -->
+  <header class="site-header" id="siteHeader" hidden>
+    <div class="nav-container">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Side Navigation Drawer -->
+  <div class="side-drawer" id="sideDrawer" aria-hidden="true">
+    <button class="close-drawer" id="closeDrawer" aria-label="Close menu">&times;</button>
+    <nav class="drawer-nav">
+      <a href="#hero">HOME</a>
+      <a href="#invitation">INVITATION</a>
+      <a href="#scratchSection">DETAILS</a>
+      <a href="#countdown">COUNTDOWN</a>
+      <a href="#location">LOCATION</a>
+    </nav>
+  </div>
+
+  <!-- Opening Screen (Minimalist Luxury Cover) -->
+  <section id="opening" class="opening-screen" aria-label="Wedding invitation cover">
+    <div class="opening-content">
+      <div class="opening-top">
+        <p class="opening-eyebrow fade-item">YOU ARE INVITED</p>
+        <p class="opening-sub fade-item">TO THE WEDDING OF</p>
+      </div>
+
+      <div class="opening-names-wrap fade-item">
+        <h1 class="opening-title">MUHAMMED HISHAM</h1>
+        <span class="opening-ampersand">&amp;</span>
+        <h1 class="opening-title">ANEENA JUBIN</h1>
+      </div>
+
+      <div class="opening-date-wrap fade-item">
+        <p class="opening-date">27 DECEMBER 2026</p>
+        <p class="opening-day">SUNDAY</p>
+      </div>
+
+      <div class="opening-action fade-item">
+        <button id="openButton" class="pill-open-button" type="button">TAP TO OPEN</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Website Content -->
+  <main id="website" hidden>
+    
+    <!-- Hero Section -->
+    <section class="page hero-page" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <h1 class="hero-names">MUHAMMED HISHAM &amp; ANEENA JUBIN</h1>
+        <div class="hero-rule"></div>
+        <p class="hero-tagline">Together with their families,<br>invite you to celebrate their wedding.</p>
+        
+        <div class="scroll-indicator">
+          <span class="scroll-text">SCROLL</span>
+          <div class="scroll-stem"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Invitation & Blessing Section -->
+    <section class="page invitation-page" id="invitation">
+      <div class="page-content reveal">
+        <p class="arabic" lang="ar" dir="rtl">بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ</p>
+        <div class="ornament">✦ ❦ ✦</div>
+        <p class="section-label">TOGETHER WITH OUR FAMILIES</p>
+        <p class="invitation-text">With the blessings of Allah,<br>we cordially request the honour<br>of your presence at the wedding of</p>
+        <h2 class="couple-headline"><span>MUHAMMED HISHAM</span><em>&amp;</em><span>ANEENA JUBIN</span></h2>
+        <div class="ornament">❦</div>
+        <p class="invitation-text">As we begin this beautiful journey together,<br>your presence and prayers will make<br>our celebration truly memorable.</p>
+      </div>
+    </section>
+
+    <!-- Scratch Card Section -->
+    <section class="page scratch-page" id="scratchSection">
+      <div class="page-content reveal">
+        <p class="section-label">A SPECIAL ANNOUNCEMENT</p>
+        <h2 class="section-title">Our Wedding Day</h2>
+        <div class="ornament">✦ ❦ ✦</div>
+        <p class="section-subtitle">Scratch the card to reveal<br>the details of our special day.</p>
+        
+        <div class="scratch-card">
+          <div class="scratch-result">
+            <p class="scratch-label">THE WEDDING OF</p>
+            <p class="scratch-couple">HISHAM &amp; ANEENA</p>
+            <strong class="scratch-date">27</strong>
+            <p class="scratch-month">DECEMBER 2026</p>
+            <p class="scratch-day">SUNDAY</p>
+            <div class="scratch-divider"></div>
+            <p class="scratch-time">4:00 PM – 8:00 PM</p>
+            <p class="scratch-venue">B.U.M HALL</p>
+            <p class="scratch-place">MUNDITHODIKA, MALAPPURAM</p>
+          </div>
+          <canvas id="scratchCanvas" aria-label="Scratch to reveal wedding details"></canvas>
+        </div>
+
+        <button id="revealButton" class="text-button" type="button">Reveal without scratching</button>
+        <p class="scratch-footnote">A BEAUTIFUL BEGINNING AWAITS</p>
+      </div>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="page countdown-page" id="countdown">
+      <div class="page-content reveal">
+        <p class="section-label">THE CELEBRATION BEGINS IN</p>
+        <h2 class="section-title">Counting Down to Forever</h2>
+        <div class="ornament">❦</div>
+        <div class="countdown-grid">
+          <div class="time-box"><strong id="days">00</strong><span>DAYS</span></div>
+          <div class="time-box"><strong id="hours">00</strong><span>HOURS</span></div>
+          <div class="time-box"><strong id="minutes">00</strong><span>MINUTES</span></div>
+          <div class="time-box"><strong id="seconds">00</strong><span>SECONDS</span></div>
+        </div>
+        <p id="countdownText" class="countdown-caption">We look forward to celebrating with you.</p>
+      </div>
+    </section>
+
+    <!-- Location Section (Points to the image inside 1794161420667/) -->
+    <section class="page location-page" id="location">
+      <div class="page-content reveal">
+        <h2 class="large-page-title">OUR<br>LOCATION</h2>
+        
+        <div class="venue-card-clean">
+          <div class="venue-photo-wrapper">
+            <img src="1794161420667/venue.jpg" alt="B.U.M Hall Auditorium Front" class="venue-photo">
+          </div>
+
+          <div class="venue-pin-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+              <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+          </div>
+
+          <h3 class="location-hall-name">B.U.M HALL AUDITORIUM</h3>
+          <p class="location-town">MUNDITHODIKA, MALAPPURAM</p>
+          <p class="location-timing">SUNDAY, 27 DECEMBER 2026<br>4:00 PM – 8:00 PM</p>
+
+          <!-- Line Art Route Card -->
+          <div class="location-map-card">
+            <div class="map-illustration">
+              <svg viewBox="0 0 320 130" fill="none" stroke="#cfc3ab" stroke-width="1.2">
+                <path d="M10,95 Q70,90 120,60 T230,65 T310,40" stroke-dasharray="3 3"/>
+                <path d="M50,110 C90,85 140,95 200,45" stroke="#dfd6c4" stroke-width="2"/>
+                <circle cx="120" cy="60" r="4" fill="#c49a62"/>
+                <circle cx="230" cy="65" r="3" fill="#8d9d80"/>
+                <rect x="250" y="70" width="35" height="28" rx="2" stroke="#b9a16e"/>
+                <polyline points="250,80 267,65 285,80"/>
+                <circle cx="267" cy="85" r="3" fill="#b9a16e"/>
+              </svg>
+            </div>
+            <a class="directions-button" href="https://maps.app.goo.gl/m6cZAimPiFoehZr89" target="_blank" rel="noopener noreferrer">
+              OPEN IN GOOGLE MAPS ↗
+            </a>
+          </div>
+
+          <button id="calendarButton" class="calendar-pill-button" type="button">
+            ADD TO CALENDAR
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Closing Section -->
+    <section class="page closing-page">
+      <div class="page-content reveal">
+        <div class="ornament">✦ ❦ ✦</div>
+        <p class="section-label">WITH LOVE AND GRATITUDE</p>
+        <h2 class="closing-title">Thank You</h2>
+        <p class="closing-message">Your presence, blessings and prayers<br>are the greatest gifts we could receive.</p>
+        <h3 class="closing-names">MUHAMMED HISHAM <span>&amp;</span> ANEENA JUBIN</h3>
+        <p class="closing-date">27 • 12 • 2026</p>
+        <button id="shareButton" class="share-button" type="button">SHARE INVITATION</button>
+      </div>
+    </section>
+
+    <footer>MUHAMMED HISHAM &amp; ANEENA JUBIN • 2026</footer>
+  </main>
+
+  <!-- Audio Element -->
+  <audio id="music" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Floating Audio Button -->
+  <button id="musicButton" class="music-floating-btn" type="button" aria-label="Toggle sound" hidden>
+    <svg id="musicIconPlaying" class="audio-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+    </svg>
+    <svg id="musicIconMuted" class="audio-icon hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+      <line x1="23" y1="9" x2="17" y2="15"></line>
+      <line x1="17" y1="9" x2="23" y2="15"></line>
+    </svg>
+  </button>
+
+</body>
+</html>
