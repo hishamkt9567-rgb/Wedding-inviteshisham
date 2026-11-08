@@ -552,7 +552,7 @@ button {
 }
 
 /* =========================================================
-   LOCATION SECTION
+   LOCATION SECTION (Local Image Card)
    ========================================================= */
 .location-page {
   background: #fbf9f6;
@@ -584,7 +584,7 @@ button {
   width: 100%;
   height: 250px;
   overflow: hidden;
-  background: #222;
+  background: #ebe6dc;
 }
 
 .venue-photo {
